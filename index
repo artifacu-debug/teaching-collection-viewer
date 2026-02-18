@@ -200,15 +200,15 @@
 
         <div class="card">
             <div class="card-image-container">
-                <a href="Haile/index.html">
-                    <img src="Haile/Haile_preview.jpg" class="card-image" alt="Haile Selassie">
+                <a href="camera/index.html">
+                    <img src="camera/camera_preview.jpg" class="card-image" alt="Camera">
                 </a>
              
             </div>
-            <a href="Haile/index.html" style="text-decoration:none; color:inherit;">
+            <a href="camera/index.html" style="text-decoration:none; color:inherit;">
                 <div class="card-info">
-                    <h2 class="card-title">H. M. Haile Selassie, 1937</h2>
-                    <p class="card-desc">Sava Botzaris<br>Bronze</p>
+                    <h2 class="card-title">Camera, 1937</h2>
+                    <p class="card-desc">Sava Botzaris<br>Metal</p>
                     <span class="view-btn">View Object &rarr;</span>
                 </div>
             </a>

@@ -249,7 +249,7 @@ Ceramic Westinghouse Art Deco Blue Pitcher. U-Shaped rectangular blue body, unif
                  <span class="close-btn" onclick="closeModal('qr-modal-overlay')">&times;</span>
             </div>
             <h2 style="margin-top:0;">View in your space</h2>
-            <p class="qr-text">Scan this code with your phone camera to view the Wrestler in AR.</p>
+            <p class="qr-text">Scan this code with your phone camera to view the object in AR.</p>
             <img id="qr-image" class="qr-image" src="" alt="QR Code" />
         </div>
     </div>
@@ -356,10 +356,10 @@ Ceramic Westinghouse Art Deco Blue Pitcher. U-Shaped rectangular blue body, unif
                 // Left
                 ctx.font = `bold ${fontSize}px serif`;
                 ctx.textAlign = "left";
-                ctx.fillText("Wrestler", padding, textY);
+                ctx.fillText("Art Deco Pitcher", padding, textY);
                 ctx.font = `normal ${fontSize * 0.6}px sans-serif`;
                 ctx.fillStyle = "#555";
-                ctx.fillText("Dudley Vaill Talcott, 1929", padding, textY + (fontSize * 1.2));
+                ctx.fillText("Hall China Company, 1940s", padding, textY + (fontSize * 1.2));
                 
                 // Right
                 ctx.font = `bold ${fontSize * 0.7}px serif`;
@@ -368,7 +368,7 @@ Ceramic Westinghouse Art Deco Blue Pitcher. U-Shaped rectangular blue body, unif
                 ctx.fillText("The Wolfsonian–FIU", canvas.width - padding, barY + (barHeight/2) + (fontSize * 0.2));
 
                 const link = document.createElement('a');
-                link.download = 'Wolfsonian_Wrestler_Postcard.jpg';
+                link.download = 'Wolfsonian_Pitcher_Postcard.jpg';
                 link.href = canvas.toDataURL('image/jpeg', 0.9);
                 link.click();
             };

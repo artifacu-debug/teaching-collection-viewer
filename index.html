@@ -6,34 +6,34 @@
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Jacques+Francois&family=Lateef&family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;800&family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
     <style>
-      body { margin: 0; padding: 0; background-color: #f9f9f9; font-family: 'Lato', sans-serif; color: #1a1a1a; }
+      body { margin: 0; padding: 0; background-color: #f9f9f9; font-family: 'Poppins', sans-serif; color: #1a1a1a; }
       
-      /* Stop user from scrolling while intro plays */
       body.no-scroll { overflow: hidden; height: 100vh; }
 
       /* --- INTRO LOADER --- */
       #intro-shutter {
           position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-          background-color: #1a1a1a; 
+          background-color: #2A3C4D; /* Matched to the new Navy text */
           z-index: 99999;
           display: flex; flex-direction: column; justify-content: center; align-items: center;
           transition: transform 1.2s cubic-bezier(0.77, 0, 0.175, 1);
       }
       
       .intro-title {
-          font-family: 'Jacques Francois', serif; /* Matching Header */
-          font-size: 3em; color: white; margin: 0;
+          font-family: 'Poppins', sans-serif; 
+          font-size: 3em; color: white; margin: 0; font-weight: 800;
           opacity: 0; text-align: center; padding: 0 20px; 
-          text-transform: uppercase;
+          text-transform: uppercase; letter-spacing: -1px;
           transform: translateY(20px);
           animation: textReveal 1s ease-out forwards 0.2s;
       }
       
       .intro-line {
-          width: 0; height: 1px; background: white; margin-top: 20px;
+          width: 0; height: 4px; background: #dfbe72; /* Mustard accent line */
+          margin-top: 20px; border-radius: 2px;
           animation: lineExpand 1s cubic-bezier(0.23, 1, 0.32, 1) forwards 0.8s;
       }
 
@@ -43,8 +43,7 @@
       .shutter-open { transform: translateY(-100%); }
       .fade-content .intro-title, .fade-content .intro-line { opacity: 0; transition: opacity 0.5s ease; }
 
-      /* --- HEADER (New Jacques Francois Style) --- */
-   /* --- HEADER (Updated Kid-Friendly Style) --- */
+      /* --- HEADER (Chunky & Geometric) --- */
       header { 
           text-align: center; padding: 60px 20px 40px 20px; 
           background-color: #ffffff; 
@@ -57,44 +56,62 @@
           font-size: 3.5rem; margin: 0; 
           color: #2A3C4D; /* Deep Navy Blue */
           line-height: 1; text-transform: uppercase; font-weight: 800; 
-          letter-spacing: -1px; /* Pulls the chunky letters slightly closer together */
+          letter-spacing: -1.5px;
       }
       
       .subtitle { 
           font-family: 'Poppins', sans-serif; 
           margin-top: 5px; font-size: 1.8rem; 
-          color: #6888a1; /* Using your Denim Blue from the cards */
-          font-weight: 600; line-height: 1;
+          color: #6888a1; /* Denim Blue */
+          font-weight: 600; line-height: 1; letter-spacing: -0.5px;
       }
       
       .mobile-break { display: none; }
 
-      /* --- SEARCH BAR --- */
+      /* --- SEARCH BAR (Colored & Playful) --- */
       .search-container {
-          max-width: 600px; margin: -25px auto 30px; padding: 0 20px;
+          max-width: 600px; margin: -28px auto 30px; padding: 0 20px;
           position: relative; z-index: 10;
           opacity: 0; transition: opacity 1s ease 0.7s, transform 1s ease 0.7s;
           transform: translateY(20px);
       }
       
       .search-wrapper { position: relative; width: 100%; transition: transform 0.2s ease; }
+      
+      /* New Rounded SVG Icon */
       .search-icon {
-          position: absolute; left: 20px; top: 50%; transform: translateY(-50%);
-          width: 18px; height: 18px; fill: #999; transition: fill 0.3s ease; pointer-events: none;
+          position: absolute; left: 22px; top: 50%; transform: translateY(-50%);
+          width: 20px; height: 20px; 
+          stroke: #abc3d0; /* Light Blue outline */
+          transition: stroke 0.3s ease; pointer-events: none;
       }
 
       #search-input {
-          width: 100%; height: 50px; padding: 0 20px 0 50px;
-          font-family: 'Lato', sans-serif; font-size: 16px; font-weight: 400; color: #1a1a1a;
-          background-color: #ffffff; border: 1px solid #e0e0e0; border-radius: 50px;
-          box-shadow: 0 4px 15px rgba(0,0,0,0.05); outline: none; box-sizing: border-box;
+          width: 100%; height: 56px; padding: 0 20px 0 55px;
+          font-family: 'Poppins', sans-serif; font-size: 1.1rem; font-weight: 500; 
+          color: #2A3C4D; /* Navy text typing */
+          background-color: #ffffff; 
+          border: 3px solid #abc3d0; /* Thick Light Blue border */
+          border-radius: 50px;
+          box-shadow: 0 8px 20px rgba(171, 195, 208, 0.25); /* Color-tinted shadow */
+          outline: none; box-sizing: border-box;
           transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
           appearance: none; -webkit-appearance: none;
       }
-      #search-input:hover { box-shadow: 0 6px 20px rgba(0,0,0,0.08); border-color: #ccc; }
-      #search-input:focus { border-color: #1a1a1a; box-shadow: 0 8px 25px rgba(0,0,0,0.12); transform: scale(1.01); }
-      #search-input:focus + .search-icon { fill: #1a1a1a; }
-      ::placeholder { color: #bbb; font-weight: 300; }
+      
+      #search-input:hover { 
+          box-shadow: 0 10px 25px rgba(171, 195, 208, 0.4); 
+          border-color: #9cb287; /* Changes to Sage Green on hover */
+      }
+      
+      #search-input:focus { 
+          border-color: #6888a1; /* Changes to Denim Blue on click */
+          box-shadow: 0 12px 30px rgba(104, 136, 161, 0.3); 
+          transform: scale(1.02); 
+      }
+      
+      #search-input:focus + .search-icon { stroke: #6888a1; }
+      ::placeholder { color: #abc3d0; font-weight: 500; }
 
       /* --- GALLERY --- */
       .gallery-container { max-width: 1000px; margin: 40px auto; padding: 0 20px; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
@@ -102,79 +119,69 @@
       /* --- CARDS --- */
       .card { 
           position: relative; 
-          border-radius: 16px; /* Increased for a softer, kid-friendly look */
+          border-radius: 16px; 
           overflow: hidden; 
-          box-shadow: 0 4px 15px rgba(0,0,0,0.05); 
+          box-shadow: 0 8px 20px rgba(0,0,0,0.06); 
           transition: transform 0.2s, box-shadow 0.2s; 
           text-decoration: none; color: inherit; display: block;
           
-          /* Animation Setup */
           opacity: 0; transform: translateY(30px);
           animation-fill-mode: forwards; 
       }
       
-      /* New Kid-Friendly Palette from Image */
-      .card:nth-child(1) { background-color: #abc3d0; } /* Light Blue */
-      .card:nth-child(2) { background-color: #d4a59a; } /* Dusty Pink */
-      .card:nth-child(3) { background-color: #dfbe72; } /* Mustard */
-      .card:nth-child(4) { background-color: #9cb287; } /* Sage Green */
-      .card:nth-child(5) { background-color: #6888a1; } /* Denim Blue */
-      .card:nth-child(6) { background-color: #b87568; } /* Terracotta */
+      .card:nth-child(1) { background-color: #abc3d0; } 
+      .card:nth-child(2) { background-color: #d4a59a; } 
+      .card:nth-child(3) { background-color: #dfbe72; } 
+      .card:nth-child(4) { background-color: #9cb287; } 
+      .card:nth-child(5) { background-color: #6888a1; } 
+      .card:nth-child(6) { background-color: #b87568; } 
 
       @keyframes cardSlideUp { to { opacity: 1; transform: translateY(0); } }
 
-      .card:hover { transform: translateY(-5px) !important; box-shadow: 0 15px 40px rgba(0,0,0,0.1); }
+      .card:hover { transform: translateY(-8px) !important; box-shadow: 0 20px 40px rgba(0,0,0,0.12); }
 
-      .card-image-container { position: relative; width: 100%; height: 260px; background-color: #f4f4f4; }
+      .card-image-container { position: relative; width: 100%; height: 260px; background-color: #ffffff; }
       .card-image { width: 100%; height: 100%; object-fit: cover; }
 
-      /* --- STAFF BUTTON (Subtle) --- */
-      .staff-lock {
-          position: absolute; top: 15px; right: 15px; z-index: 10;
-          width: 30px; height: 30px;
-          background: transparent; 
-          display: flex; align-items: center; justify-content: center;
-          opacity: 0.2; 
-          transition: all 0.3s ease; cursor: pointer;
-      }
-      .staff-lock svg { width: 22px; height: 22px; fill: #1a1a1a; filter: drop-shadow(0 1px 2px rgba(255,255,255,0.8)); }
-      .staff-lock:hover { opacity: 1; transform: scale(1.1); }
-
-      /* --- CARD INFO --- */
+      /* --- CARD INFO (Updated to Poppins) --- */
       .card-info { padding: 25px; }
       
       .card-title { 
-          font-family: 'Playfair Display', serif; 
-          font-size: 1.5em; 
-          margin: 0 0 8px 0; 
-          color: #1a1a1a; 
+          font-family: 'Poppins', sans-serif; 
+          font-size: 1.3em; font-weight: 700;
+          margin: 0 0 6px 0; 
+          color: #2A3C4D; /* Navy */
+          line-height: 1.2;
+          letter-spacing: -0.5px;
       }
       
       .card-desc { 
-          font-family: 'Lato', sans-serif; 
-          font-size: 0.9em; 
-          color: rgba(26, 26, 26, 0.8); /* Darkened slightly to ensure contrast against colored backgrounds */
+          font-family: 'Poppins', sans-serif; 
+          font-size: 0.9em; font-weight: 500;
+          color: rgba(42, 60, 77, 0.8); /* Slightly transparent Navy */
           line-height: 1.5; 
           margin-bottom: 20px; 
       }
       
       .view-btn { 
-          font-family: 'Lato', sans-serif; 
-          font-size: 0.75em; 
+          font-family: 'Poppins', sans-serif; 
+          font-size: 0.8em; 
           font-weight: 700; 
           text-transform: uppercase; 
           letter-spacing: 1.5px; 
-          color: #1a1a1a; 
-          border-bottom: 2px solid #1a1a1a; 
+          color: #2A3C4D; 
+          border-bottom: 3px solid #2A3C4D; /* Thicker, punchier underline */
           padding-bottom: 2px; 
+          transition: opacity 0.2s;
       }
+      
+      .card:hover .view-btn { opacity: 0.7; }
 
       /* Animation Trigger Class */
       body.loaded header { opacity: 1; }
       body.loaded .search-container { opacity: 1; transform: translateY(0); }
       body.loaded .card { animation: cardSlideUp 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards; }
       
-      /* Extended delays for all 6 cards */
       body.loaded .card:nth-child(1) { animation-delay: 0.6s; }
       body.loaded .card:nth-child(2) { animation-delay: 0.7s; }
       body.loaded .card:nth-child(3) { animation-delay: 0.8s; }
@@ -184,13 +191,10 @@
 
       @media (max-width: 600px) {
         h1 { font-size: 2.2rem; }
-        .subtitle { font-size: 1.8rem; }
-        
-        .intro-title { font-size: 1.8em; } 
+        .subtitle { font-size: 1.6rem; }
+        .intro-title { font-size: 2em; } 
         header { padding: 40px 20px 50px 20px; }
-        .mobile-break { display: block; }
-        .search-container { margin-top: -25px; }
-        .staff-lock { opacity: 0.4; top: 10px; right: 10px; } 
+        .search-container { margin-top: -28px; }
       }
     </style>
 </head>
@@ -209,8 +213,9 @@
     <div class="search-container">
         <div class="search-wrapper">
             <input type="text" id="search-input" placeholder="Search collection..." onkeyup="filterGallery()">
-            <svg class="search-icon" viewBox="0 0 24 24">
-                <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+            <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
             </svg>
         </div>
     </div>
@@ -222,7 +227,6 @@
                 <a href="camera/index.html">
                     <img src="camera/camera_preview.jpg" class="card-image" alt="Camera">
                 </a>
-             
             </div>
             <a href="camera/index.html" style="text-decoration:none; color:inherit;">
                 <div class="card-info">
@@ -238,7 +242,6 @@
                 <a href="percolator/index.html">
                     <img src="percolator/percolator_preview.jpg" class="card-image" alt="Pyrex Percolator">
                 </a>
-                
             </div>
             <a href="percolator/index.html" style="text-decoration:none; color:inherit;">
                 <div class="card-info">
@@ -264,47 +267,46 @@
             </a> 
         </div>
         
-   <div class="card">
+        <div class="card">
             <div class="card-image-container">
                 <a href="Art Deco Pitcher/index.html">
                     <img src="Art Deco Pitcher/art_deco_pitcher_preview.jpg" class="card-image" alt="Blue Ceramic Pitcher">
                 </a>
-                
             </div>
             <a href="Art Deco Pitcher/index.html" style="text-decoration:none; color:inherit;">
                 <div class="card-info">
-                    <h2 class="card-title">Welingtonhouse Ceramic Pitcher</h2>
+                    <h2 class="card-title">Westinghouse Ceramic Pitcher</h2>
                     <p class="card-desc">Hall China Company for Westinghouse<br> Blue Ceramic</p>
                     <span class="view-btn">View Object &rarr;</span>
                 </div>
             </a>
         </div>
-           <div class="card">
-         <div class="card-image-container">
+
+        <div class="card">
+            <div class="card-image-container">
                 <a href="Drip-O-Lator/index.html">
                     <img src="Drip-O-Lator/drip_o_lator_preview.jpg" class="card-image" alt="Wear-Ever Percolator">
                 </a>
-                
             </div>
             <a href="Drip-O-Lator/index.html" style="text-decoration:none; color:inherit;">
                 <div class="card-info">
-                    <h2 class="card-title">Wear-Ever Drip-O-Lato</h2>
+                    <h2 class="card-title">Wear-Ever Drip-O-Lator</h2>
                     <p class="card-desc">Wear-Ever, 1935<br> Aluminum, plastic</p>
                     <span class="view-btn">View Object &rarr;</span>
                 </div>
             </a>
         </div>
-                   <div class="card">
-         <div class="card-image-container">
+
+        <div class="card">
+            <div class="card-image-container">
                 <a href="ice crusher/index.html">
                     <img src="ice crusher/ice_crusher_preview.jpg" class="card-image" alt="Metal and plastic ice crusher">
                 </a>
-                
             </div>
             <a href="ice crusher/index.html" style="text-decoration:none; color:inherit;">
                 <div class="card-info">
                     <h2 class="card-title">Model 160 Ice Crusher, 1940</h2>
-                    <p class="card-desc">Dazey Corporation<br> Metal, plastic, chrome plating.</p>
+                    <p class="card-desc">Dazey Corporation<br> Metal, plastic, chrome plating</p>
                     <span class="view-btn">View Object &rarr;</span>
                 </div>
             </a>
@@ -312,22 +314,18 @@
     </div>
 
     <script>
-        // --- 1. FORCE SCROLL RESET ON LOAD ---
         if ('scrollRestoration' in history) { history.scrollRestoration = 'manual'; }
         window.scrollTo(0,0);
 
-        // --- ANIMATION CONTROLLER WITH DAILY CHECK ---
         window.addEventListener('load', () => {
             window.scrollTo(0,0);
             const shutter = document.getElementById('intro-shutter');
             const body = document.body;
             
-            // Check Local Storage for today's date
             const today = new Date().toDateString(); 
             const lastShown = localStorage.getItem('wolfsonian_intro_shown');
 
             if (lastShown !== today) {
-                // --- FIRST TIME TODAY: Play Animation ---
                 localStorage.setItem('wolfsonian_intro_shown', today);
                 
                 setTimeout(() => {
@@ -339,14 +337,12 @@
                     }, 600);
                 }, 1800);
             } else {
-                // --- SEEN TODAY: Skip Animation ---
                 shutter.style.display = 'none'; 
                 body.classList.remove('no-scroll');
                 body.classList.add('loaded'); 
             }
         });
 
-        // --- SEARCH FUNCTIONALITY ---
         function filterGallery() {
             const input = document.getElementById('search-input');
             const filter = input.value.toUpperCase();

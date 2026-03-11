@@ -16,7 +16,7 @@
       /* --- INTRO LOADER --- */
       #intro-shutter {
           position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-          background-color: #2A3C4D; /* Matched to the new Navy text */
+          background-color: #2A3C4D; 
           z-index: 99999;
           display: flex; flex-direction: column; justify-content: center; align-items: center;
           transition: transform 1.2s cubic-bezier(0.77, 0, 0.175, 1);
@@ -32,7 +32,7 @@
       }
       
       .intro-line {
-          width: 0; height: 4px; background: #dfbe72; /* Mustard accent line */
+          width: 0; height: 4px; background: #dfbe72; 
           margin-top: 20px; border-radius: 2px;
           animation: lineExpand 1s cubic-bezier(0.23, 1, 0.32, 1) forwards 0.8s;
       }
@@ -43,7 +43,7 @@
       .shutter-open { transform: translateY(-100%); }
       .fade-content .intro-title, .fade-content .intro-line { opacity: 0; transition: opacity 0.5s ease; }
 
-      /* --- HEADER (Chunky & Geometric) --- */
+      /* --- HEADER --- */
       header { 
           text-align: center; padding: 60px 20px 40px 20px; 
           background-color: #ffffff; 
@@ -54,7 +54,7 @@
       h1 { 
           font-family: 'Poppins', sans-serif; 
           font-size: 3.5rem; margin: 0; 
-          color: #2A3C4D; /* Deep Navy Blue */
+          color: #2A3C4D; 
           line-height: 1; text-transform: uppercase; font-weight: 800; 
           letter-spacing: -1.5px;
       }
@@ -62,13 +62,13 @@
       .subtitle { 
           font-family: 'Poppins', sans-serif; 
           margin-top: 5px; font-size: 1.8rem; 
-          color: #6888a1; /* Denim Blue */
+          color: #6888a1; 
           font-weight: 600; line-height: 1; letter-spacing: -0.5px;
       }
       
       .mobile-break { display: none; }
 
-      /* --- SEARCH BAR (Colored & Playful) --- */
+      /* --- SEARCH BAR --- */
       .search-container {
           max-width: 600px; margin: -28px auto 30px; padding: 0 20px;
           position: relative; z-index: 10;
@@ -78,22 +78,21 @@
       
       .search-wrapper { position: relative; width: 100%; transition: transform 0.2s ease; }
       
-      /* New Rounded SVG Icon */
       .search-icon {
           position: absolute; left: 22px; top: 50%; transform: translateY(-50%);
           width: 20px; height: 20px; 
-          stroke: #abc3d0; /* Light Blue outline */
+          stroke: #abc3d0; 
           transition: stroke 0.3s ease; pointer-events: none;
       }
 
       #search-input {
           width: 100%; height: 56px; padding: 0 20px 0 55px;
           font-family: 'Poppins', sans-serif; font-size: 1.1rem; font-weight: 500; 
-          color: #2A3C4D; /* Navy text typing */
+          color: #2A3C4D; 
           background-color: #ffffff; 
-          border: 3px solid #abc3d0; /* Thick Light Blue border */
+          border: 3px solid #abc3d0; 
           border-radius: 50px;
-          box-shadow: 0 8px 20px rgba(171, 195, 208, 0.25); /* Color-tinted shadow */
+          box-shadow: 0 8px 20px rgba(171, 195, 208, 0.25); 
           outline: none; box-sizing: border-box;
           transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
           appearance: none; -webkit-appearance: none;
@@ -101,11 +100,11 @@
       
       #search-input:hover { 
           box-shadow: 0 10px 25px rgba(171, 195, 208, 0.4); 
-          border-color: #9cb287; /* Changes to Sage Green on hover */
+          border-color: #9cb287; 
       }
       
       #search-input:focus { 
-          border-color: #6888a1; /* Changes to Denim Blue on click */
+          border-color: #6888a1; 
           box-shadow: 0 12px 30px rgba(104, 136, 161, 0.3); 
           transform: scale(1.02); 
       }
@@ -140,36 +139,33 @@
 
       .card:hover { transform: translateY(-8px) !important; box-shadow: 0 20px 40px rgba(0,0,0,0.12); }
 
+      /* --- LIVING CARD HOVER EFFECT --- */
       .card-image-container { position: relative; width: 100%; height: 260px; background-color: #ffffff; }
-        
-     .card-image-container { position: relative; width: 100%; height: 260px; background-color: #ffffff; }
       
-      /* The Static Image */
       .card-image { 
           position: absolute; top: 0; left: 0; 
           width: 100%; height: 100%; object-fit: cover; 
           z-index: 2; 
-          transition: opacity 0.5s ease; /* Smooth fade */
+          transition: opacity 0.4s ease; 
       }
       
-      /* The Hidden Turntable */
       .card-turntable { 
           position: absolute; top: 0; left: 0; 
           width: 100%; height: 100%; object-fit: cover; 
           z-index: 1; 
       }
       
-      /* The Hover Effect */
-      .card:hover .card-image { opacity: 0; }
+      /* Fades out the JPG when hovered, revealing the spinning MP4 underneath */
+      .card:hover .card-image { opacity: 0; } 
 
-      /* --- CARD INFO (Updated to Poppins) --- */
+      /* --- CARD INFO --- */
       .card-info { padding: 25px; }
       
       .card-title { 
           font-family: 'Poppins', sans-serif; 
           font-size: 1.3em; font-weight: 700;
           margin: 0 0 6px 0; 
-          color: #2A3C4D; /* Navy */
+          color: #2A3C4D; 
           line-height: 1.2;
           letter-spacing: -0.5px;
       }
@@ -177,7 +173,7 @@
       .card-desc { 
           font-family: 'Poppins', sans-serif; 
           font-size: 0.9em; font-weight: 500;
-          color: rgba(42, 60, 77, 0.8); /* Slightly transparent Navy */
+          color: rgba(42, 60, 77, 0.8); 
           line-height: 1.5; 
           margin-bottom: 20px; 
       }
@@ -189,7 +185,7 @@
           text-transform: uppercase; 
           letter-spacing: 1.5px; 
           color: #2A3C4D; 
-          border-bottom: 3px solid #2A3C4D; /* Thicker, punchier underline */
+          border-bottom: 3px solid #2A3C4D; 
           padding-bottom: 2px; 
           transition: opacity 0.2s;
       }
@@ -241,11 +237,10 @@
 
     <div class="gallery-container">
 
-  <div class="card">
+        <div class="card">
             <div class="card-image-container">
                 <a href="camera/index.html">
                     <img src="camera/camera_preview.jpg" class="card-image" alt="Camera">
-                    
                     <video src="camera/camera_turntable.mp4" class="card-turntable" autoplay loop muted playsinline disablePictureInPicture></video>
                 </a>
             </div>
@@ -257,10 +252,12 @@
                 </div>
             </a>
         </div>
+
         <div class="card">
             <div class="card-image-container">
                 <a href="percolator/index.html">
                     <img src="percolator/percolator_preview.jpg" class="card-image" alt="Pyrex Percolator">
+                    <video src="percolator/percolator_turntable.mp4" class="card-turntable" autoplay loop muted playsinline disablePictureInPicture></video>
                 </a>
             </div>
             <a href="percolator/index.html" style="text-decoration:none; color:inherit;">
@@ -275,7 +272,8 @@
         <div class="card">
             <div class="card-image-container">
                 <a href="Pitcher/index.html">
-                    <img src="Pitcher/burrite_pitcher_preview.jpg" class="card-image" alt="Building">
+                    <img src="Pitcher/burrite_pitcher_preview.jpg" class="card-image" alt="Burrite Pitcher">
+                    <video src="Pitcher/pitcher_turntable.mp4" class="card-turntable" autoplay loop muted playsinline disablePictureInPicture></video>
                 </a>
             </div>
             <a href="Pitcher/index.html" style="text-decoration:none; color:inherit;">
@@ -291,6 +289,7 @@
             <div class="card-image-container">
                 <a href="Art Deco Pitcher/index.html">
                     <img src="Art Deco Pitcher/art_deco_pitcher_preview.jpg" class="card-image" alt="Blue Ceramic Pitcher">
+                    <video src="Art Deco Pitcher/art_deco_pitcher_turntable.mp4" class="card-turntable" autoplay loop muted playsinline disablePictureInPicture></video>
                 </a>
             </div>
             <a href="Art Deco Pitcher/index.html" style="text-decoration:none; color:inherit;">
@@ -306,6 +305,7 @@
             <div class="card-image-container">
                 <a href="Drip-O-Lator/index.html">
                     <img src="Drip-O-Lator/drip_o_lator_preview.jpg" class="card-image" alt="Wear-Ever Percolator">
+                    <video src="Drip-O-Lator/drip_o_lator_turntable.mp4" class="card-turntable" autoplay loop muted playsinline disablePictureInPicture></video>
                 </a>
             </div>
             <a href="Drip-O-Lator/index.html" style="text-decoration:none; color:inherit;">
@@ -321,6 +321,7 @@
             <div class="card-image-container">
                 <a href="ice crusher/index.html">
                     <img src="ice crusher/ice_crusher_preview.jpg" class="card-image" alt="Metal and plastic ice crusher">
+                    <video src="ice crusher/ice_crusher_turntable.mp4" class="card-turntable" autoplay loop muted playsinline disablePictureInPicture></video>
                 </a>
             </div>
             <a href="ice crusher/index.html" style="text-decoration:none; color:inherit;">
